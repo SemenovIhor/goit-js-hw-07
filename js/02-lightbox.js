@@ -18,15 +18,6 @@ const addGalleryItem = createGalleryItem(galleryItems);
 
 galleryItemsEl.innerHTML = addGalleryItem;
 
-galleryItemsEl.addEventListener('click', onImageClick);
+new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });  
 
-function onImageClick(e) {
-    e.preventDefault()
-
-    if (e.target.nodeName !== 'IMG') {
-        return;
-    }
-  
-  var lightbox = new SimpleLightbox('.gallery a', {captionsData: 'alt'  });  
-}
 
